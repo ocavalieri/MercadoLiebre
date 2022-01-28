@@ -7,4 +7,7 @@ app.get('/', (req,res) => {
     res.sendFile(path.resolve('./views/home.html'));
 });
 
-app.listen(8080, () => console.log ('servidor en puerto 8080'));
+//app.listen(8080, () => console.log ('servidor en puerto 8080'));
+app.listen(preocess.env.PORT || 8080, function() {
+    console.log('Servidor corriendo en el puerto 8080');
+});
